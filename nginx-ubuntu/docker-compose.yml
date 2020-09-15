@@ -1,0 +1,23 @@
+#Todo con Docker
+#@utor Facundo Rauber <dis.jacku@gmail.com>
+#
+version: "3.8"
+
+services:
+
+  tcd_nginx-ubuntu:
+#    image: img_tdc_nginx-ubuntu:latest
+    build: ./nginx
+    container_name: "tcd_nginx-ubuntu"
+    restart: always
+    volumes:
+      - ./web:/var/www/html/web
+      - ./paginas-extras:/var/www/html/paginas-extras
+    networks:
+      - docker-net
+    ports:
+      - 80:80  
+
+networks:
+  docker-net:
+   external: true
