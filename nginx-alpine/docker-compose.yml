@@ -1,6 +1,7 @@
-#Todo con Docker
-#@utor Facundo Rauber <dis.jacku@gmail.com>
+# Todo con Docker
+# @utor Facundo Rauber <dis.jacku@gmail.com>
 #
+# docker network create docker-net
 version: "3.7"
 
 services:
@@ -15,7 +16,8 @@ services:
       - ./paginas-extras:/var/www/html/paginas-extras
     networks:
       - docker-net
-    
+    ports:
+      - 80:80
 
 networks:
   docker-net:

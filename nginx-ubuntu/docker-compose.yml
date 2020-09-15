@@ -1,6 +1,7 @@
 #Todo con Docker
 #@utor Facundo Rauber <dis.jacku@gmail.com>
 #
+# docker network create docker-net
 version: "3.8"
 
 services:
